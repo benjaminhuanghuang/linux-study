@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
 # copy source code to vm
-COPY linux-2.6.34 /opt/linux-2.6.34
+# COPY linux-2.6.34 /opt/linux-2.6.34
 ENV DEBIAN_FRONTEND=nointeractive
 
 
@@ -11,5 +11,5 @@ RUN  apt-get update \
      && ln -sf /usr/bin/qeum-system-x86_64 /usr/bin/qeum
 
 
-VOLUME /opt/linux-2.6.34
-WORKDIR /opt/linux-2.6.34
+VOLUME /root/env
+WORKDIR /root/env

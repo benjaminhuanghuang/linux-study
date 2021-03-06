@@ -13,7 +13,7 @@ Build a linux kernel debug/tract environment in Docker
 
 1. connect to docker
 ```
-  docker run --rm -it -v "$$PWD":/opt/linux-2.6.34 my-linux-kernel-lab
+  docker run --rm -it -v "$$PWD":/root/env my-linux-kernel-lab
 ```
 
 
@@ -66,6 +66,6 @@ connect to qemu
   (gdb) tui enable          # enable text UI
 
   (gdb) disass kernel_init
-  
+
 ```
       
