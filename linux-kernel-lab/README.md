@@ -7,7 +7,7 @@ Build a linux kernel debug/tract environment in Docker
 
 0. Build docker
 ```
-  docker build -t my-linux-kernel-lab
+  docker build . -t my-linux-kernel-lab
 ```
 
 
@@ -22,11 +22,12 @@ Build a linux kernel debug/tract environment in Docker
 make x86_64_defconfig
 
 make menuconfig
-  * Complie the kernel with debug info
+  Kernel hacking ->
+    Compile-time checks and compiler options ->
+      * Complie the kernel with debug info
 
-make -j4
+make -j8
 ```
-
 
 
 3. Run linux kernel in qemu
