@@ -12,10 +12,12 @@
   cd linux-3.18.6
 
   make i386_defconfig
+  # or
   make x86_64_defconfig
 
   make -j8          #  hours
 ```
+
 Build kernel with debug information
 ```
   make x86_64_defconfig
@@ -29,6 +31,8 @@ Build kernel with debug information
 ```
 
 ## root file system
+Build init module, kernel will load it as #1 process
+
 ```
   cd ~/linuxkernel
 
@@ -38,13 +42,16 @@ Build kernel with debug information
 
   cd menu
 
-  gcc -o init linktable.c menu.c test.c -m32 static -lpthread
+  # build init module, kernel will load init as #1 process
+  gcc -o init linktable.c menu.c test.c -m32 -static -lpthread
+  # For 64bit build env
+  gcc -o init linktable.c menu.c test.c -static -lpthread
 
   cd ../rootfs
 
-  cd ../menu/init ./
+  cp ../menu/init ./
 
-  # 
+  # package /rootfs/* into an image contains root file system 
   find .| cpio -o -Hnewc | gzip -9 > ../rootfs.img
 ```
 
