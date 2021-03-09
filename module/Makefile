@@ -1,4 +1,4 @@
-obj-m := module_example.o 
+obj-m += module_example.o 
 CURRENT_PATH:=$(shell pwd)
 LINUX_KERNEL:=5.4.0-66-generic#$(shell uname -r)
 LINUX_KERNEL_PATH:=/usr/src/linux-headers-$(LINUX_KERNEL)
@@ -6,6 +6,9 @@ LINUX_KERNEL_PATH:=/usr/src/linux-headers-$(LINUX_KERNEL)
 
 env:
 	docker run --rm -it -v "$$PWD":/root/env my-linux-kernel-lab
+
+test:
+	make -C /lib/modules/5.4.0-66/build M=$(PWD) modules
 
 all:
 	make -C $(LINUX_KERNEL_PATH) M=$(CURRENT_PATH) modules
