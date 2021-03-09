@@ -9,6 +9,14 @@
 - Linux内核分析与应用 西安邮电大学
   https://www.bilibili.com/video/BV1mZ4y1s7a5/?spm_id_from=trigger_reload
 
+  - http://www.kerneltravel.net/  
+
+  - https://www.lanqiao.cn/courses/2610
+
+  - http://wiki.0xffffff.org/
+  
+  - https://github.com/hurley25/hurlex-doc
+
 
 - Linux内核探秘 (高剑林 2013)
 https://www.bilibili.com/video/BV1EE411o76Q?from=search&seid=3093041985609448442
