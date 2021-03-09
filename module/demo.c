@@ -1,7 +1,6 @@
 #inlcude <linux/kernel.h>
+#inlcude <linux/init.h>
 #inlcude <linux/module.h>
-#inlcude <linux/sched.h>
-
 
 /*
   __init 
@@ -19,7 +18,7 @@ static void  __exit lkp_exit(void){
 module_init(lkp_init);
 module_exit(lkp_exit);
 
-MODULE_LICENSE('GPL');
+MODULE_LICENSE("GPL");
 
 
 

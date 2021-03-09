@@ -1,6 +1,6 @@
-obj-m := module_example.o 
+obj-m:=module_example.o 
 CURRENT_PATH:=$(shell pwd)
-LINUX_KERNEL:=5.4.0-66-generic#$(shell uname -r)
+LINUX_KERNEL:=5.4.0-66-generic #$(shell uname -r)
 LINUX_KERNEL_PATH:=/usr/src/linux-headers-$(LINUX_KERNEL)
 
 
