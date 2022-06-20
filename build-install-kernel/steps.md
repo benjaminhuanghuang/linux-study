@@ -54,3 +54,11 @@ $ make gconfig – X windows (Gtk) based configuration tool, works best under Gn
 
 
 4. Update grub config
+
+
+
+
+100. Verify new Linux kernel version after reboot:
+```
+$ uname -mrs
+```
