@@ -44,11 +44,9 @@ $ make xconfig – X windows (Qt) based configuration tool, works best under KDE
 $ make gconfig – X windows (Gtk) based configuration tool, works best under Gnome Dekstop.
 ```
 
-
-
 3. Compile
 ```
-  $ make -j $(nproc)
+  $ make -j $(nproc) 
 ```
 
 
