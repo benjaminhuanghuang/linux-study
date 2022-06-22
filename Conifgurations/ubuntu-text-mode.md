@@ -7,21 +7,21 @@ sudo cp -n /etc/default/grub /etc/default/grub.backup
 
 2. Edit the configuration file:
 ```
-sudo gedit /etc/default/grub
+sudo vi /etc/default/grub
 ```
 
 change
 ```
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
-set GRUB_CMDLINE_LINUX="" to GRUB_CMDLINE_LINUX="text"
-remove # from the line GRUB_TERMINAL="console" to disable graphical terminal.
+GRUB_CMDLINE_LINUX=""
+#GRUB_TERMINAL=console
 ```
 
 to
 ```
 #GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 GRUB_CMDLINE_LINUX="text"
-GRUB_TERMINAL="console"
+GRUB_TERMINAL=console
 ```
 
 3. Save the file and apply changes:
