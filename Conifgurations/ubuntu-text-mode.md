@@ -4,6 +4,7 @@ How to Boot Ubuntu 20.04 into Text / Command Console
 ```
 sudo cp -n /etc/default/grub /etc/default/grub.backup
 ```
+
 2. Edit the configuration file:
 ```
 sudo gedit /etc/default/grub
@@ -33,7 +34,7 @@ GRUB_TERMINAL="console"
 sudo systemctl set-default multi-user.target
 ```
 
-## Start GUI
+## Start GUI in Text mode
 ```
   startx
 ```
@@ -47,3 +48,9 @@ sudo update-grub
 # re-enable GUI mode
 sudo systemctl set-default graphical.target
 ```
+
+
+## Customize GRUB to choose enter the text mode or enter the graphical mode
+https://askubuntu.com/questions/543472/how-do-i-customize-grub-to-choose-enter-the-text-mode-or-enter-the-graphical-mod
+
+
