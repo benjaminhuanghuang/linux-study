@@ -49,8 +49,11 @@ sudo update-grub
 sudo systemctl set-default graphical.target
 ```
 
+- Can't start ubuntu-desktop after upgrade to 18.04
+switch the login display manager from gdm3 to lightdm.
+https://askubuntu.com/questions/1031948/cant-start-ubuntu-desktop-after-upgrade-to-18-04
 
-## Customize GRUB to choose enter the text mode or enter the graphical mode
+- Customize GRUB to choose enter the text mode or enter the graphical mode
 https://askubuntu.com/questions/543472/how-do-i-customize-grub-to-choose-enter-the-text-mode-or-enter-the-graphical-mod
 
 
