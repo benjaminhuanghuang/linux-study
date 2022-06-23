@@ -26,7 +26,7 @@ add
 Acquire::Languages "none";
 ```
 
-3. Use TLP
+3. 优化笔记本电池
 ```
 sudo add-apt-repository ppa:linrunner/tlp
 sudo apt update
