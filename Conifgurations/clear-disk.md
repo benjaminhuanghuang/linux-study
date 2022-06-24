@@ -1,4 +1,10 @@
-1. df -h：显示磁盘占用
+1. 显示磁盘占用
+```
+  df -h：
+
+  du -hd 1 /home 
+  -d, --max-depth=N：目录的层数, 只查看/home下一层目录深度，并以人类可读的方式输出
+```
 
 2. apt-get autoclean：清理旧版本缓存
 
