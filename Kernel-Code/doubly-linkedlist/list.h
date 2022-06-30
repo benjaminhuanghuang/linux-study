@@ -1,7 +1,12 @@
 #ifndef LINUXLIST_H
 #define LINUXLIST_H
+struct list_head
+{
+  struct list_head *prev;
+  struct list_head *next;
+};
 
-// 把一个变量有两个字段,都指向它自己
+// 生成struct的两个字段,都指向它自己
 #define LIST_HEAD_INIT(name) \
   {                          \
     &(name), &(name)         \
@@ -18,15 +23,39 @@
 #define list_for_each(pos, head) \
   for (pos = (head)->next; pos != head; pos = pos->next)
 
+#define offsetof(TYPE, MEMBER) ((size_t) & ((TYPE *)0)->MEMBER)
+
+/**
+ * container_of - cast a member of a structure out to the containing structure
+ * @ptr:	the pointer to the member.
+ * @type:	the type of the container struct this is embedded in.
+ * @member:	the name of the member within the struct.
+ *
+ *  ptr: curr
+ *  type: struct score_st
+ *  member: node
+ */
+#define container_of(ptr, type, member) \
+  ({ (type *)((char *)ptr - offsetof(type, member)); })
+
+/**
+ * list_entry - get the struct for this entry
+ * @ptr:	the &struct list_head pointer.
+ * @type:	the type of the struct this is embedded in.
+ * @member:	the name of the list_head within the struct.
+ */
+#define list_entry(ptr, type, member) \
+  container_of(ptr, type, member)
 /*
  * Insert a new entry between two known consecutive entries.
  *
  * This is only for internal list manipulation where we know
  * the prev/next entries already!
  */
-static inline void __list_add(struct list_head *new,
-                              struct list_head *prev,
-                              struct list_head *next)
+static inline void
+__list_add(struct list_head *new,
+           struct list_head *prev,
+           struct list_head *next)
 {
   next->prev = new;
   new->next = next;

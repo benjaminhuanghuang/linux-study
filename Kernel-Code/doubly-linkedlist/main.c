@@ -6,17 +6,23 @@
 
 #define NAMESIZE 32
 
-struct scrore_st
+struct score_st
 {
   int id;
   char name[NAMESIZE];
+  struct list_head node; // prev & next
   int math;
   int chinese;
 };
 
+static void print_s(struct score_st *d)
+{
+  printf("%d %s %d %d \n", d->id, d->name, d->math, d->chinese);
+}
+
 int main()
 {
-  struct scrore_st *data_ptr;
+  struct score_st *data_ptr;
   struct list_head *curr;
 
   LIST_HEAD(head);
@@ -34,10 +40,13 @@ int main()
     data_ptr->math = rand() % 100;
     data_ptr->chinese = rand() % 100;
 
-    list_insert(&data_ptr->node, &head);
+    list_add(&data_ptr->node, &head);
 
     list_for_each(curr, &head)
     {
+      // offset between 0 to struct score_st->node)
+      data_ptr = list_entry(curr, struct score_st, node);
+      print_s(data_ptr);
     }
   }
 
