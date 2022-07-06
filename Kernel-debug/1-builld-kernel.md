@@ -27,6 +27,6 @@ cd linux-5.0.1
 
 
   make -j4          # N = core * 2
-
-  mkdir rootfs
 ```
+
+最终生成 linux/vmlinux

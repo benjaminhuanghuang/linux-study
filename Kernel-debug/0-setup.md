@@ -15,6 +15,20 @@ su root
 
 ```
   apt-get install openssh-server -y
+
+  ps -e | grep ssh
+
+  sudo etc/init.d/ssh start
+
+  ifconfig
+```
+
+修改 ssh 配置允许 root 远程登录
+
+```
+  vim /etc/ssh/sshd_config
+
+  #PermitRootLogin without-password
 ```
 
 方便从 host 机器 操作 unbuntu VM 或 用 vscode 调试
