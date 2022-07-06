@@ -29,9 +29,9 @@ start qemu
 ```
 qemu-system-x86_64 -kernel ~/workspace/linux/arch/x86/boot/bzImage \
   -initrd ~/workspace/rootfs/rootfs.img \
-  -append "root=/dev/sda console=ttyS0" \
+  -append "root=/dev/sda console=ttyS0 nokaslr" \
   -nographic \
-  nokaslr -s
+  -s -S
 
 -kernel # 指定编译好的内核镜像
 
@@ -42,6 +42,8 @@ qemu-system-x86_64 -kernel ~/workspace/linux/arch/x86/boot/bzImage \
 -nographic 不使用图形输出窗口
 
 -s 是-gdb tcp::1234 缩写，监听 1234 端口，在 GDB 中可以通过 target remote localhost:1234 连接
+
+-S 在启动时并不启动CPU，需要在monitor中运行 "c"（或cont）命令才能继续运行。配合“-gdb”参数一起使用，启动后，让GDB远程连接到QEMU上，然后再继续运行。
 
 nokaslr 关闭地址随机化，不然断点处无法停止
 ```
