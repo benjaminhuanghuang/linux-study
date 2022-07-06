@@ -2,7 +2,7 @@
 
 1. VM 100G disk space
 
-2. use root
+2. use root build linux kernel
 
 ```
 sudo passwd
