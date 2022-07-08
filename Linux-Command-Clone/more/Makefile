@@ -1,5 +1,5 @@
 CC=gcc
 CFLAGS+=-c -Wall -g
 
-more.exe: more.c
+%.exe: %.c
 	$(CC) $^ $(CFLAGES) -o $@ 

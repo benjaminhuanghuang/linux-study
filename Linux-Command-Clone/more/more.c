@@ -1,11 +1,15 @@
 /*
-more filename
+./more.exe
 
-command | more
+./more.exe filename
 
-more < filename
+command | ./more.exe
+
+./more.exe < filename
 
 */
+#include <stdio.h>
+#include <stdlib.h>
 
 #define PAGELEN 24
 #define LINELEN 512
