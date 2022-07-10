@@ -1,6 +1,6 @@
 - What dose that do?
 - How does that work?
-- CanI try to do one?
+- Can I try to do one?
 
 ## reference
 
