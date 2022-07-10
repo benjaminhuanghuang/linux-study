@@ -4,8 +4,6 @@ CFLAGS+=-c -Wall -g
 %.exe: %.c
 	$(CC) $^ $(CFLAGES) -o $@ 
 
-
-clean: 
-	rm -rf *.exe
-
 	
+clean: 
+	rm -rf *.exe	
