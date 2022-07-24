@@ -14,4 +14,7 @@ gdb
 (gdb) file linux-3.18.6/vmlinux    # 加载符号表
 (gdb) target remote:1234           # connect to gdbserver
 (gdb) break start_kernel
+(gdb) c
+(gdb) list
+
 ```
