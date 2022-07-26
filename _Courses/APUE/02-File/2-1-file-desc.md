@@ -9,3 +9,26 @@ STDIN_FILENO
 STDOUT_FILENO
 
 STDERR_FILENO
+
+## Lab: how many files can be opened in Linux system?
+
+```
+openmax.c
+
+_SC_OPEN_MAX
+
+getrlimit(2)
+sysconfig(3)
+
+grep OPEN_MAX /usr/include/sys/syslimits.h
+
+getconf OPEN_MAX
+
+which getconf
+
+vim /usr/src/usr.bin/getconf/getcong.c
+
+ulimit -n
+
+ulimit -n 64
+```
