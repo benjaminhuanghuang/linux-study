@@ -1,0 +1,2 @@
+- How does GNU GRUB work
+  - https://0xax.github.io/grub/
