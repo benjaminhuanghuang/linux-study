@@ -26,7 +26,6 @@ cat id_rsa.pub >> authorized_keys
 ```
   sudo vim /etc/ssh/sshd_conig
 
-  RSAAuthentication yes
   PubkeyAuthentication yes
 ```
 
