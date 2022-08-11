@@ -18,6 +18,12 @@ Verify that ssh service running
  sudo systemctl status ssh
 ```
 
+ssh run at start up.
+```
+  sudo systemctl enable ssh
+```
+
+
 configure your firewall to allow incoming SSH connections
 ```
   sudo ufw allow ssh

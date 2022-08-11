@@ -48,7 +48,11 @@ PasswordAuthentication no
 ```
 
 ## Client side
-
+put 私钥 id_rsa to .ssh folder
 ```
+  # linux
   scp ben@127.0.0.1:/home/ben/.ssh/id_rsa /Users/bhuang/.ssh
+
+  # windows
+  scp ben@127.0.0.1:/home/ben/.ssh/id_rsa C:\Users\your_username\.ssh
 ```
